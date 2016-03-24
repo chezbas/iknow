@@ -1,0 +1,1 @@
+<div style="display:none;"><img src="images/iknow_header_hover.png" alt="" style="display:none;"/></div>

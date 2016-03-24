@@ -1,0 +1,610 @@
+.boutton_varin_default_on
+{
+	background-position: -350px 0;
+}
+
+.boutton_varin_default_on:hover
+{
+	background-position: -350px -35px;
+}
+
+.boutton_varin_default_off
+{
+	background-position: -315px 0;
+}
+
+.boutton_varin_default_off:hover
+{
+	background-position: -315px -35px;
+}
+
+.boutton_varin_neutre_on
+{
+	background-position: -420px 0;
+}
+
+.boutton_new
+{
+	background-position: -455px 0;
+}
+
+.boutton_new:hover
+{
+	background-position: -455px -35px;
+}
+
+.boutton_varin_neutre_on:hover
+{
+	background-position: -420px -35px;
+}
+
+.boutton_varin_neutre_off
+{
+	background-position: -385px 0;
+}
+
+.boutton_varin_neutre_off:hover
+{
+	background-position: -385px -35px;
+}
+
+.boutton_url_copy
+{
+	background-position: -175px 0;
+}
+
+.boutton_url_copy:hover
+{
+	background-position: -175px -35px;
+}
+
+.boutton_url_delete
+{
+	background-position: -210px 0;
+}
+
+.boutton_url_delete:hover
+{
+	background-position: -210px -35px;
+}
+
+.boutton_url_return
+{
+	background-position: -280px 0;
+}
+
+.boutton_url_return:hover
+{
+	background-position: -280px -35px;
+}
+
+.boutton_url_home
+{
+	background-position: -245px 0;
+}
+
+.boutton_url_home:hover
+{
+	background-position: -245px -35px;
+}
+
+.boutton_ctrl
+{
+	background-position: -35px 0;
+}
+
+.boutton_ctrl:hover
+{
+	background-position: -35px -35px;
+}
+
+.boutton_copy
+{
+	background-position: 0 0;
+}
+
+.boutton_copy:hover
+{
+	background-position: 0 -35px;
+}
+
+.boutton_lock
+{
+	background-position: -105px 0;
+}
+
+.boutton_lock:hover
+{
+	background-position: -105px -35px;
+}
+
+.boutton_save
+{
+	background-position: -140px 0;
+}
+
+.boutton_save:hover
+{
+	background-position: -140px -35px;
+}
+
+.boutton_outils_edit
+{
+	background-position: -70px 0;
+}
+
+
+.boutton_outils_edit:hover
+{
+	background-position: -70px -35px;
+}
+
+
+.boutton_outils
+{
+	margin-right:3px;
+	height:35px;
+	width:35px;
+	float:left;	
+	background-image: url(../../images/icons.png);
+}
+
+.valider
+{
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:0 0;
+	width: 20px;
+	height:20px;
+	display:block;	
+}
+
+.valider:hover
+{
+	background-position:0 -20px;
+}
+
+.monter
+{
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-20px 0;
+	width: 20px;
+	height:20px;
+	display:block;	
+}
+
+.monter:hover
+{
+	background-position:-20px -20px;
+}
+
+.descendre
+{
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-40px 0;
+	width: 20px;
+	height:20px;
+	display:block;	
+}
+
+.descendre:hover
+{
+	background-position:-40px -20px;
+}
+
+.droite
+{
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-60px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+}
+
+
+.gauche
+{
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-80px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+}
+
+
+.retour
+{
+
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-100px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+}
+
+.retour:hover
+{
+
+	background-position:-100px -20px;
+}
+
+
+.tag
+{
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-120px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+}
+
+.tag:hover
+{
+	background-position:-120px -20px;
+}
+
+.no_tag
+{
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-140px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+}
+
+.no_tag:hover
+{
+	background-position:-140px -20px;
+}
+
+
+.ok
+{
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-162px -2px;
+	width: 16px;
+	height:16px;
+	display:block;
+}
+
+
+.warning
+{
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-182px -2px;
+	width: 16px;
+	height:16px;
+	display:block;
+}
+
+
+.erreur
+{
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-202px -2px;
+	width: 16px;
+	height:16px;
+	display:block;
+}
+
+
+.maison
+{
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-220px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+}
+
+.maison:hover
+{
+	background-position:-220px -20px;
+}
+
+.sauvegarder
+{
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-240px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+}
+
+
+.voir
+{
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-260px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+}
+
+.voir:hover
+{
+	background-position:-260px -20px;
+}
+.ajouter
+{
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-280px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+}
+
+.ajouter:hover
+{
+	background-position:-280px -20px;
+}
+
+
+.editer
+{
+
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-300px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+	
+}
+
+
+.editer:hover
+{
+	background-position:-300px -20px;
+}
+
+.dupliquer
+{
+
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-320px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+	
+}
+
+.dupliquer:hover
+{
+	background-position:-320px -20px;
+}
+
+.obligatoire
+{
+
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-340px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+
+}
+
+
+.liste
+{
+
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-360px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+	
+}
+
+.liste:hover
+{
+	background-position:-360px -20px;
+}
+
+
+.saut_etape
+{
+
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-380px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+	
+}
+
+.saut_etape:hover
+{
+	background-position:-380px -20px;
+}
+
+.annuler
+{
+
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-400px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+	
+}
+.annuler:hover
+{
+	background-position:-400px -20px;
+}
+
+.bloquer
+{
+
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-420px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+	
+}
+
+
+.copy_url
+{
+
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-440px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+	
+}
+
+
+.clean_url
+{
+
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-460px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+	
+}
+
+
+.aide
+{
+
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-480px -1px;
+	width: 17px;
+	height:16px;
+	float:right;
+}
+
+
+
+.delete
+{
+
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-500px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+	
+}
+
+.delete:hover
+{
+	background-position:-500px -20px;
+}
+
+
+
+.informations
+{
+
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-520px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+	
+}
+
+
+.shortcut
+{
+
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-540px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+	
+}
+
+.shortcut:hover
+{
+	background-position:-540px -20px;
+}
+
+.bug
+{
+
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-560px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+	
+}
+.bug:hover
+{
+	background-position:-560px -20px;
+}
+
+.icn_neutre
+{
+
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-580px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+	
+}
+
+.icn_defaut
+{
+
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-600px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+}
+
+
+.icn_add
+{
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-620px 0;
+	width: 20px;
+	height:20px;
+	display:block;
+}
+
+.icn_add:hover
+{
+	background-position:-620px -20px;
+}

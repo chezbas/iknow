@@ -1,0 +1,124 @@
+body
+{
+	background-color: #F5F9FE;	
+	margin:0;
+	padding:0;
+	height: 100%;
+	width:100%;
+	position: absolute;
+	color:#126499;
+	font-family: sans-serif;
+	font-size: 12px;
+}
+
+#container
+{
+	width:800px;	
+	left:50%;
+	margin-left:-400px;
+	position: absolute;	
+	bottom: 30px;
+	top: 180px;
+	overflow: auto;
+}
+
+.header
+{
+	background: url(../../images/err_head_back.jpg) repeat-x ;
+	margin:0;
+	padding-top:20px;
+	/*position: absolute;*/
+	width: 100%;
+	height: 150px;
+	border-bottom:1px solid #AAA;
+}
+
+.logo
+{
+	background: url(../../images/iknow_128.png) no-repeat center ;
+	height: 128px;
+	width: 100%;
+}
+
+
+.err
+{
+	text-align: center;
+}
+
+.table_err
+{
+	font-weight: bold;
+}
+.click:hover
+{
+	cursor: pointer;
+	color:#52A4DB;
+}
+
+div.ok
+{
+	background: url(../images/ok.png) no-repeat center ;
+	height: 16px;
+	width: 16px;
+}
+
+.i
+{
+	font-weight: bold;
+	color:red;	
+}
+
+.ko
+{
+	background: url(../images/ko.png) no-repeat center ;
+	height: 16px;
+	width: 16px;
+}
+
+td.resume
+{
+	border: 2px solid black;
+	padding: 0 70px;
+}
+
+td.ligne
+{
+	padding: 0 71px;
+	border: 1px solid grey;	
+}
+
+tr.error
+{
+	background-color: #DD6666;	
+}
+
+tr.ok
+{
+	background-color: #66DD66;	
+}
+
+tr.hide
+{
+	display: none;	
+}
+
+div.bloc_detail
+{
+	overflow:auto;
+	max-height:200px;
+	border:1px solid grey;
+	background-color: #EEAAAA;
+	font-size: 0.9em;
+}
+
+.footer
+{
+	position:absolute;
+	bottom:0;
+	height:20px;
+	background: url(../../images/default/window/top-bottom.png) repeat-x ;
+	width:100%;
+	line-height: 20px;
+	text-indent: 10px;
+}

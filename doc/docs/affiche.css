@@ -1,0 +1,60 @@
+#barre_outils
+{
+	padding-top:6px;
+}
+
+#titre
+{
+	color: #004A99; /* Bleu pur Photoshop CS4 */
+	font-weight: bold;
+	font-size: 18px;
+	background: url(../../images/err_head_back.jpg) repeat-x ;
+	box-shadow: 1px 1px 2px #555;
+	-webkit-box-shadow: 1px 1px 2px #555; 
+}
+
+#description
+{
+	margin: 4px 10px 4px 10px;
+}
+
+.portail_titre_logo
+{
+	background: url(../../images/iknow_100.png) no-repeat ;
+	width:100px;
+	height:39px;
+	top:1px;
+	right:5px;
+	position: absolute;
+}
+
+#arbo
+{
+	font-size: 10px;
+	height:42px;
+	box-shadow: 1px 1px 2px #888;
+	-webkit-box-shadow: 1px 1px 2px #888; 
+}
+
+.img_lien
+{
+	margin: 0;
+}
+
+.texte_lien
+{
+	margin: 0 5px 0 0;
+}
+
+.texte_lien_last
+{
+	font-weight:bold;
+	margin: 0 5px 0 0;
+}
+
+.tableau_lien
+{
+	font-size:10px;
+	height:42px;
+	margin-left:4px;
+}

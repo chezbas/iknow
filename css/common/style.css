@@ -1,0 +1,887 @@
+body
+{
+	font-family: "tahoma", "arial", "helvetica", "sans-serif";
+	font-size: 8pt;
+	margin:0;
+	padding:0;
+}
+
+.bold
+{
+	font-weight: bold;	
+}
+
+.lst_change_version
+{
+	margin-left: 5px;	
+}
+
+.logo_iknow_header
+{
+	width:118px;
+	height:65px;
+	float:right;
+	background: url(../../images/iknow_header.png) center no-repeat;
+	position: relative;
+	z-index:1999;
+}
+
+.icn_max_on
+{
+	height:21px;
+	width:23px;
+	background:url(../../images/Box_Green.png);
+	color:#FFF;
+	padding:3px 0 0 1px;
+	text-align:center;
+	font-weight: bold;
+}
+
+.icn_max_off
+{
+	height:21px;
+	width:23px;
+	background:url(../../images/Box_Orange.png);
+	color:#444;
+	padding:3px 0 0 1px;
+	text-align:center;
+	font-weight: bold;
+}
+
+
+.logo_iknow_header:hover
+{
+	cursor: pointer;
+	background: url(../../images/iknow_header_hover.png) center no-repeat;
+}
+
+.pointer
+{
+	cursor: pointer;	
+}
+
+.logo_iknow_header_right
+{
+	height:65px;
+	float:right;
+	background: url(../../images/iknow_header_repeat.png) center repeat-x;
+	position: relative;
+	z-index:1999;
+	padding: 0 10px;
+	cursor: default;
+}
+
+
+.lib_lmod
+{
+	line-height:24px;
+	text-indent:10px;
+}
+
+
+#iknow_panel_header_titre
+{
+	font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+	font-size: 15px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: lighter;
+}
+
+#status_soft
+{
+	color:#444444;
+	text-align: right;
+	margin-left:520px;
+}
+
+.iknow_ctrl_internal_container
+{
+	border-top: 1px solid #8B92B1;
+	border-right: 1px solid #8B92B1;
+	border-left: 1px solid #8B92B1;
+	max-height: 200px;
+}
+
+.wfull
+{
+	width: 100%;	
+}
+
+.hide
+{
+	display:none;	
+}
+
+.center
+{
+	text-align: center;
+}
+
+#iknow_ctrl_arrow
+{
+	background-image:url(../../images/default/panel/tool-sprites.gif);
+	height:15px;
+	width:15px;
+	background-position: 0 -75px;
+	margin-top: 4px;
+	margin-left: 4px;
+	float:left;
+	cursor: pointer;	
+	-moz-user-select: none;
+   	-khtml-user-select: none;
+}
+
+
+#iknow_ctrl_title
+{
+	float:left;
+	/*border-right: 1px solid #777;	
+	padding-right: 4px;
+	padding-left: 4px;*/
+	margin-left:5px;
+	height:22px;
+	cursor: default;
+}
+
+.iknow_lib_hover
+{
+	/*float:left;
+	padding-right: 4px;
+	padding-left: 4px;
+	height:22px;*/
+	font-weight: bold;
+}
+
+input.text
+{
+	border:0;
+	border-left:2px inset #EEE;
+	border-top:2px inset #EEE;
+	height:16px;
+	outline: 0 none;
+	margin-left: 0;
+}
+
+.erreur_sql
+{
+	color:#990000;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+p
+{
+margin:0;	
+}
+
+.gradient
+{
+	background-image: url(../../images/shadow-tb.png);
+	background-position:0px -8px;
+	background-repeat:  repeat-x;
+}
+
+.i
+{
+	font-weight: bold;
+	color:red;	
+}
+
+
+#footer
+{
+	border-top: 1px solid #8B92B1;
+	position: absolute;  
+    bottom: 0px;  
+    height: 22px;  
+    width: 100%;  
+ 	background-image: url(../../images/footer.png);
+	line-height: 22px;
+	left:0;
+	right:0;
+}
+
+.aide_footer
+{
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-480px -1px;
+	width: 17px;
+	height:22px;
+	border-right: solid 1px #777;
+	padding-right: 4px;
+}
+
+
+#footer_conteneur
+{	
+	padding: 0 8px 0 8px;
+}
+
+#iknow_action
+{
+	/*float:left;*/
+}
+
+.iknow_titre_controle
+{
+	text-indent: 5px;
+}
+
+.td_mini
+{
+	border:0;
+	margin:0;
+	padding:0;
+}
+
+#iknow_log_btn
+{
+	background-image:url(../../images/default/panel/tool-sprites.gif);
+	height:15px;
+	width:15px;
+	background-position: 0 -75px;
+	/*float:right;*/
+	margin-top: 4px;
+	margin-left:22px;
+	margin-bottom: 3px;
+	/*margin-right: 4px;*/
+	cursor: pointer;	
+	-moz-user-select: none;
+   	-khtml-user-select: none;
+}
+
+.icon_log
+{
+	/*width:16px;height:16px;position:absolute;background-image:url(../../images/log.png);margin-top:3px;*/
+}
+
+.footer_sep_white
+{
+	float:right;
+	border-left: 1px solid white;
+	height:22px;	
+}
+
+.btn_menu_footer
+{
+	float:left;
+	cursor: pointer;
+	background-image: url(../../images/icones_iknow.png);
+	background-repeat: no-repeat;
+	background-position:-360px 0;
+	width: 20px;
+	height:20px;
+}
+
+.btn_menu_footer:hover
+{
+	background-position:-360px -20px;
+}
+
+.lib_btn_menu_footer
+{
+	float:left;
+	cursor:default;	
+}
+
+
+#lifetime
+{
+	/*float:right;
+	padding: 0 5px;
+	border-left: solid 1px #FFF;
+	border-right: solid 1px #777;*/
+}
+
+.td_mini iknow_titre_controle
+{
+	cursor:default;	
+}
+
+#lib_gestion_date
+{
+	cursor:default;	
+	background: url(../../images/calendar_link.png) no-repeat 0px 3px;
+	padding-left: 22px;
+}
+
+#lib_erreur
+{
+	float:right;
+	padding: 0 5px;
+	background-position: right;
+	/*border-left: solid 1px #FFF;*/
+	/*border-right: solid 1px #777;*/
+	height: 22px;
+}
+
+.foot_sep_grey
+{
+	float:right;
+	padding: 0;
+	background-position: right;
+	border-left: solid 1px #777;
+	height: 22px;
+}
+
+.foot_sep_white
+{
+	float:left;
+	padding: 0;
+	background-position: left;
+	border-left: 1px solid #FFF;
+	height: 22px;
+}
+.no_free_cookie
+{
+	font-weight: bold;
+	color:red;
+}
+
+.iknow_gen_title
+{
+	font-weight: bold;	
+	cursor: default;
+}
+
+#lib_dev
+{
+	float:right;
+	padding: 0 5px 0 5px;
+	background-position: right;
+	border-left: solid 1px #AAA;
+	color:red;
+}
+
+.div_menu_footer
+{
+	display:none;
+	position: absolute; 
+    bottom:22px;  
+	right:0px;
+	z-index:90000;
+}
+
+.header_title
+{
+	height: 65px;
+	padding-left:12px;
+	position:relative;
+	font-size:1.6em;
+	font-weight:bold;
+	font-family: sans-serif;
+	overflow: hidden;
+	line-height:65px;
+	cursor: default;
+	z-index: 50;
+}
+
+
+.iknow_el_container
+{
+	position: absolute; 
+    bottom:23px;  
+	z-index:1000;
+	display:none;
+	border-top: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+	overflow: hidden;
+	cursor: default;
+}
+
+
+tr.header_line
+{
+	height:22px;
+	vertical-align: top;
+}
+
+.iknow_el_internal_container
+{
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-right: 20px;
+	background: url(../../images/barre_informations/back.jpg) no-repeat right #EBF4F9;
+}
+
+
+.iknow_menu_footer_internal_container
+{
+	border-top: 1px solid #8B92B1;
+	border-left: 1px solid #8B92B1;	
+}
+
+
+#table_log_footer
+{
+	font-size: 11px;
+}
+.menu_valeur
+{
+	font-weight: bold;
+	padding-left: 8px;
+}
+#div_menu_footer table
+{
+	font-size: 11px;
+}
+
+
+.footer_left
+{
+	float:left;	
+}
+
+#iknow_action table
+{
+	/*font-size: 11px;*/
+}
+
+.outils 
+{
+	font-size:12px;
+	text-align: left;
+}
+.outils td
+{
+	padding: 0 4px 0 4px;
+	white-space: nowrap;
+}
+
+.btn_action:hover
+{
+	cursor: pointer;
+}
+#bas 
+{
+	font-size:10px;
+	text-align: left;
+}
+#informations
+{
+	font-size:11px;
+	text-align: left;
+	white-space: nowrap;
+}
+
+
+img 
+{ 
+	border : none; 
+}
+td.limp
+{
+  text-align: left;
+  background-color: #FFF;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+div.limp
+{
+	background-color: #FFF;
+}
+
+td.lp
+{
+  text-align: left;
+  background-color: #EDEDED;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+div.lp
+{
+	background-color: #EDEDED;
+}
+
+td.lfond
+{
+  text-align: left;
+  background-color: #FEFEFE;
+  font-size: 14px;
+}
+td.haut
+{
+  text-align: left;
+  background-image: url(../../images/back_header_step.jpg);
+  color:#333;
+  font: bold 1.3em Tahoma;
+  border-bottom: 1px solid #91A7B4;
+}
+td.limpnumetape
+{
+	padding-right: 5px;
+	text-align: right;
+	background-color: #FFF;
+	color:#000000;
+	font: bold 25px Tahoma
+}
+td.lpnumetape
+{
+	padding-right: 5px;
+	text-align: right;
+	background-color: #EDEDED;
+	color:#000000;
+	font: bold 25px Tahoma
+}
+
+tr.sep_lp
+{
+	background: url(../../images/sep_step_p.jpg) repeat-x;
+}
+
+tr.sep_limp
+{
+	background: url(../../images/sep_step_imp.jpg) repeat-x;
+}
+
+#information 
+{
+	background-color: #99FF99;
+	font: bold 25px Tahoma;
+	height:80px;
+	width:900px;
+	margin:0px auto;
+	text-align:center;
+	padding:5px;
+	border:1px dashed #333;	
+}
+#warning 
+{
+	background-color: #FFFF99;
+	font: bold 15px Tahoma;
+	height:55px;
+	width:900px;
+	margin:0px auto;
+	text-align:center;
+	padding:5px;
+	border:1px dashed #333;
+}
+#warning  a
+{
+	background-color: #FFFF99;
+	font: bold 20px Tahoma;
+	text-align:center;
+}
+#erreur 
+{
+	background-color: #FF6600;
+	font: bold 25px Tahoma;
+	height:80px;
+	width:900px;
+	margin:0px auto;
+	text-align:center;
+	padding:5px;
+	border:1px dashed #333;
+}
+#information a 
+{
+	font: bold 15px Tahoma;
+}
+ img 
+ {
+   border: 0;
+ }
+ .icon
+ {
+ 	width: 30px;
+ 	height: 30px;
+ }
+ .BBTitre 
+ {
+	font-weight: bold;
+	text-decoration:underline;
+	font-size: 22px;
+}
+
+.BBVarIn
+{
+	font-weight: bold;
+	font-size: 12px;
+	color: #FF0000;
+}
+.BBVarInInfo /* CSS VARIN form in infobulle */
+{
+	font-weight: bold;
+	color: #FF0000;
+}	
+
+.BBVarin 
+{
+	font-weight: bold;
+	font-size: 12px;
+	color: #FF0000;
+}
+
+
+.BBVarInvimb
+{
+	font-weight: bold;
+	color: #FF0000;
+}
+
+.BBVarInvim
+{
+	color: #FF0000;
+}
+
+.contenu_onglet
+{
+	bottom:0;
+	left:0;
+	right:0;
+	top:0;	
+	position: absolute;
+	background-color: #FFF;
+}
+
+.BBField
+{
+	font-weight: bold;
+	font-size: 12px;
+	color: #2E2E2E;	
+}
+.BBVarInl 
+{
+	font-weight: bold;
+	font-size: 12px;
+	color: #DB0073;
+}
+.BBVarOut 
+{
+	font-weight: bold;
+	font-size: 12px;
+	color: #0000FF;
+}
+.BBVarExt 
+{
+	font-weight: bold;
+	font-size: 12px;
+	color: #318CE7;
+}
+.BBVarinExt
+{
+	font-weight: bold;
+	font-size: 12px;
+	color: #721F46;
+}
+.link_bbvarinext
+{
+	text-decoration: none;
+	color: #721F46;
+}
+
+.link_bbvarinlocal
+{
+	text-decoration: none;
+	color: #DB0073;
+}
+
+.link_bbvarin
+{
+	text-decoration: none;
+	color: #FF0000;
+}
+/******************************************************************************************/
+/*										POPUP TIP										  */
+/******************************************************************************************/
+#dhtmltooltip
+{
+	position: absolute;
+	width: 150px;
+	max-height: 600px;
+	border: 1px solid black;
+	padding: 2px;
+	/*background-color: red;*/
+	background: url(../../images/barre_informations/back.jpg) no-repeat right #EBF4F9;
+	visibility: hidden;
+	z-index: 10000;
+}
+#dhtmltooltip b{
+
+	font-size: 15px;
+	color: #000000;
+	
+}
+table.tableau_tag{
+	
+	border-collapse: collapse;
+	text-align:left;
+	display: block;	
+}
+th.tableau_tag{
+	
+	border:1px solid black;
+	text-indent:7px;
+	font-weight:bold;
+
+}
+td.tableau_tag{
+	
+	border:1px solid black;	
+	text-indent:7px;
+}
+
+
+/******************************************************************************************/
+/*								VIMOFY ALIAS ID FICHE									  */
+/******************************************************************************************/
+#visu_alias
+{
+	margin: 10px 0 0 0;
+	padding: 0;
+}
+
+/******************************************************************************************/
+/*									TABLEAU D'AIDE										  */
+/******************************************************************************************/
+
+
+td.tableau_aide
+{
+	font-size: 13px;
+	font-family: 'Times New Roman';
+	color: #402900;
+	font-weight: normal;
+	border:0px;
+}
+
+table.tableau_aide
+{
+	border-collapse: collapse;
+}
+
+/******************************************************************************************/
+/*											VIMOFY										  */
+/******************************************************************************************/
+
+
+table
+{
+  border-collapse: collapse;
+  border: none;
+}
+
+
+
+
+
+/* TOOLBAR */
+
+.iknow_toolbar
+{
+	height: 65px;
+	float:left;
+	line-height: 40px;
+	z-index: 50;
+	position: relative;
+}
+
+
+ul#header_list_menu li
+{
+	display: inline;	
+}
+
+
+ul#header_list_menu {
+	list-style-type : none;
+	margin:2px 0 0 0;
+	padding-left:5px;
+}
+
+
+.iknow_object_info
+{
+	height: 65px;
+	float:left;
+	border-right: 1px solid #FFF;	
+	border-left: 1px solid #777;	
+	padding:0 5px;
+}
+
+#lifetime
+{
+	/*cursor:default;*/	
+}
+
+#lib_erreur
+{
+	cursor:default;	
+}
+
+.onglet_icn_header
+{
+	background: url(../../images/hat.png) left no-repeat;
+	padding-left:20px;
+}
+
+.onglet_icn_general
+{
+    height:20px;
+    width:20px;
+    float: left;
+    margin-top: 2px;
+    margin-left: -2px;
+    background-image: url(../../images/icones_iknow.png);
+    background-repeat: no-repeat;
+	background-position:-800px 0;
+	padding-left:2px;
+}
+
+.onglet_icn_step
+{
+	background: url(../../images/footprint.png) left no-repeat;
+	padding-left:20px;
+}
+
+.onglet_icn_required
+{
+	background: url(../../images/required.png) left no-repeat;
+	padding-left:20px;
+}
+
+.onglet_icn_varin
+{
+	background: url(../../images/droite.png) left no-repeat;
+	padding-left:20px;
+}
+
+.onglet_icn_varout
+{
+	background: url(../../images/gauche.png) left no-repeat;
+	padding-left:20px;
+}
+
+.onglet_icn_tag
+{
+	background: url(../../images/tag.png) left no-repeat;
+	padding-left:20px;
+}
+
+.onglet_icn_step_solo
+{
+	background: url(../../images/one.png) left no-repeat;
+	padding-left:20px;
+}
+
+.onglet_icn_inline
+{
+	background: url(../../images/inline.png) left no-repeat;
+	padding-left:20px;
+}
+
+.onglet_icn_code
+{
+    height:20px;
+    width:20px;
+    float: left;
+    margin-left: -2px;
+    background-image: url(../../images/icones_iknow.png);
+    background-repeat: no-repeat;
+	background-position:-820px 0;
+	padding-left:2px;
+}

@@ -1,0 +1,32 @@
+#header_iknow
+{
+	background: url(../../images/err_head_back.jpg) repeat-x ;
+	margin:0;
+	/*padding-top:10px;*/
+	width: 100%;
+	height: 80px;
+	border-bottom:1px solid #AAA;
+	box-shadow: 1px 1px 2px #555;
+	-webkit-box-shadow: 1px 1px 2px #555;
+	box-shadow: 1px 1px 2px #555;
+}
+
+.logo_iknow
+{
+	background: url(../../images/iknow_70.png) no-repeat center ;
+	height: 80px;
+	width: 100%;
+}
+
+#header_iknow_title
+{
+	width: 100%;
+	text-align: right;
+	color:#126499;
+	font-size: 12px;
+	font-style: italic;
+	position: absolute;
+	top:60px;
+	right:5px;
+	cursor: default;
+}

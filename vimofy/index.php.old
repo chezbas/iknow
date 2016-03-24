@@ -1,0 +1,319 @@
+<?php 
+
+	session_start();
+	
+	require('vimofy_active_version.php');
+	$_SESSION['fichier_doc'] = 'index.php';
+	$version_soft = $vimofy_active_version;
+	
+	$type_activite = 'DEV'; 
+	
+	$_SESSION['iknow']['version_soft'] = $version_soft;
+	if(isset($_SESSION['identifier']) && $_SESSION['identifier'] == true)
+	{
+		$administration = '- Administration';
+	}
+	else
+	{
+		$administration = '';
+	}
+?>
+
+
+<html>
+	<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF8">
+		<script language="javascript">
+		var verif_chargement;
+		
+
+	function ddrivetipimg()
+	{
+
+	
+	}
+
+	function hideddrivetip()
+	{
+
+	
+	}
+			
+	function verif_chargemement_page(id)
+	{
+	
+		if(document.getElementById('matiny'))
+		{
+			clearInterval(verif_chargement);
+			initmce_modif();
+		}
+		
+	}
+
+
+	function deconnexion()
+	{
+
+		if(window.XMLHttpRequest) // Firefox et autres
+			xhr = new XMLHttpRequest(); 
+		else if(window.ActiveXObject){ // Internet Explorer 
+			try {
+				xhr = new ActiveXObject("Msxml2.XMLHTTP");
+				
+			} catch (e) {
+				xhr = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+		}
+		else { // XMLHttpRequest non support� par le navigateur 
+			alert("Votre navigateur ne supporte pas les objets XMLHTTPRequest...");
+			xhr = false; 
+		}
+
+	
+		xhr.open("POST","<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/docs/deconnexion.php",false);
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");	
+		xhr.send();
+
+		window.location.replace('<?php echo $_SESSION['fichier_doc']; ?>');
+		
+		
+	}
+
+
+
+	function copier_page(id)
+	{
+
+
+		if(window.XMLHttpRequest) // Firefox et autres
+	            xhr = new XMLHttpRequest(); 
+	    else if(window.ActiveXObject){ // Internet Explorer 
+	    	try {
+	    		xhr = new ActiveXObject("Msxml2.XMLHTTP");
+	        } catch (e) {
+	        	xhr = new ActiveXObject("Microsoft.XMLHTTP");
+	        }
+	    }
+	    else { // XMLHttpRequest non support� par le navigateur 
+	       	alert("Votre navigateur ne supporte pas les objets XMLHTTPRequest...");
+	       	xhr_connecter = false; 
+	   	}
+		
+		xhr.open("POST","<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/docs/actions.php",false);
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");  
+		xhr.send("action=0&ID="+id);
+		window.location.replace('<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/docs/edit.php?ID='+xhr.responseText);
+
+
+	}
+
+	function ajouter_frere(id)
+	{
+
+		if(window.XMLHttpRequest) // Firefox et autres
+	            xhr = new XMLHttpRequest(); 
+	    else if(window.ActiveXObject){ // Internet Explorer 
+	    	try {
+	    		xhr = new ActiveXObject("Msxml2.XMLHTTP");
+	        } catch (e) {
+	        	xhr = new ActiveXObject("Microsoft.XMLHTTP");
+	        }
+	    }
+	    else { // XMLHttpRequest non support� par le navigateur 
+	       	alert("Votre navigateur ne supporte pas les objets XMLHTTPRequest...");
+	       	xhr_connecter = false; 
+	   	}
+		
+		xhr.open("POST","<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/docs/actions.php",false);
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");  
+		xhr.send("action=1&ID="+id);
+		window.location.replace('<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/docs/edit.php?ID='+xhr.responseText);
+
+
+	}
+
+
+	function ajouter_parent(id)
+	{
+		
+		if(window.XMLHttpRequest) // Firefox et autres
+	            xhr = new XMLHttpRequest(); 
+	    else if(window.ActiveXObject){ // Internet Explorer 
+	    	try {
+	    		xhr = new ActiveXObject("Msxml2.XMLHTTP");
+	        } catch (e) {
+	        	xhr = new ActiveXObject("Microsoft.XMLHTTP");
+	        }
+	    }
+	    else { // XMLHttpRequest non support� par le navigateur 
+	       	alert("Votre navigateur ne supporte pas les objets XMLHTTPRequest...");
+	       	xhr_connecter = false; 
+	   	}
+		
+		xhr.open("POST","<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/docs/actions.php",false);
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");  
+		xhr.send("action=2&ID="+id);
+		window.location.replace('<?php echo $_SESSION['fichier_doc']; ?>?ID='+xhr.responseText);
+		
+
+	}
+
+
+	function delete_page(id)
+	{
+	    Ext.MessageBox.confirm('Suppression', 'Etes vous sur de vouloir supprimer la page?',function(btn, text){
+	        if (btn == 'yes'){
+	    		
+
+		if(window.XMLHttpRequest) // Firefox et autres
+	            xhr = new XMLHttpRequest(); 
+	    else if(window.ActiveXObject){ // Internet Explorer 
+	    	try {
+	    		xhr = new ActiveXObject("Msxml2.XMLHTTP");
+	        } catch (e) {
+	        	xhr = new ActiveXObject("Microsoft.XMLHTTP");
+	        }
+	    }
+	    else { // XMLHttpRequest non support� par le navigateur 
+	       	alert("Votre navigateur ne supporte pas les objets XMLHTTPRequest...");
+	       	xhr_connecter = false; 
+	   	}
+
+
+		xhr.open("POST","<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/docs/actions.php",false);
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded"); 
+
+
+		// On v�rifie si on peu supprimer la page 
+		xhr.send("action=3&ID="+id);
+		if(xhr.responseText == 'false')
+		{
+
+			Ext.MessageBox.alert('Erreur','Vous ne pouvez pas supprimer cet page car c\'est la derni�re du parent.');
+			return false;
+		}
+		else
+		{
+			xhr.open("POST","<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/docs/actions.php",false);
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded"); 
+			xhr.send("action=4&ID="+id);
+			window.location.replace('<?php echo $_SESSION['fichier_doc']; ?>');
+
+		}
+
+	        }
+        });		
+		//window.location.replace('index.php?ID='+xhr.responseText);
+		
+
+	}
+
+	function descendre(id)
+	{
+		
+		if(window.XMLHttpRequest) // Firefox et autres
+            xhr = new XMLHttpRequest(); 
+	    else if(window.ActiveXObject){ // Internet Explorer 
+	    	try {
+	    		xhr = new ActiveXObject("Msxml2.XMLHTTP");
+	        } catch (e) {
+	        	xhr = new ActiveXObject("Microsoft.XMLHTTP");
+	        }
+	    }
+	    else { // XMLHttpRequest non support� par le navigateur 
+	       	alert("Votre navigateur ne supporte pas les objets XMLHTTPRequest...");
+	       	xhr_connecter = false; 
+	   	}
+		
+		xhr.open("POST","<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/docs/actions.php",false);
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");  
+		xhr.send("action=5&ID="+id);
+		window.location.replace('<?php echo $_SESSION['fichier_doc']; ?>?ID='+xhr.responseText);
+	
+
+	}
+
+
+	function monter(id)
+	{
+		
+		if(window.XMLHttpRequest) // Firefox et autres
+            xhr = new XMLHttpRequest(); 
+	    else if(window.ActiveXObject){ // Internet Explorer 
+	    	try {
+	    		xhr = new ActiveXObject("Msxml2.XMLHTTP");
+	        } catch (e) {
+	        	xhr = new ActiveXObject("Microsoft.XMLHTTP");
+	        }
+	    }
+	    else { // XMLHttpRequest non support� par le navigateur 
+	       	alert("Votre navigateur ne supporte pas les objets XMLHTTPRequest...");
+	       	xhr_connecter = false; 
+	   	}
+		
+		xhr.open("POST","<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/docs/actions.php",false);
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");  
+		xhr.send("action=6&ID="+id);
+		window.location.replace('<?php echo $_SESSION['fichier_doc']; ?>?ID='+xhr.responseText);
+	
+
+	}
+
+		</script>
+		<title>Documentation VIMOFY <?php echo $administration; ?></title>
+		<link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['iknow']['version_soft']; ?>/css/common/icones_iknow.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/resources/css/ext-all.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/docs/resources/docs.css"/>
+		<link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/docs/resources/style.css"/>
+		<link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/docs/affiche.css"/>
+		<link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/docs/accueil.css"/>
+		
+			
+	</head>
+	<body id="docs">
+	
+	
+		<div id="loading-mask" style=""></div>
+		<div id="loading">
+			<div class="loading-indicator">
+				<img src="<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/docs/resources/extanim32.gif" width="32" height="32" style="margin-right: 8px;"/>Chargement...
+			</div>
+		</div>
+		<!-- include everything after the loading indicator -->
+		
+		<script type="text/javascript" src="<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/adapter/ext/ext-base.js"></script>
+		<script type="text/javascript" src="<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/ext-all.js"></script>
+		<script type="text/javascript" src="<?php echo $_SESSION['iknow']['version_soft']; ?>/doc/docs/resources/TabCloseMenu.js"></script>
+		
+		<!-- <script type="text/javascript" src="../../js/icode/init_tinymce.js"></script> -->		
+		<!--<script type="text/javascript" src="docs.js"></script>-->
+	
+		<script language="javascript">
+		
+		
+		
+
+		<?php 
+			
+			require $_SESSION['iknow']['version_soft'].'/doc/docs/docs.php';
+			require $_SESSION['iknow']['version_soft'].'/doc/docs/construct_arbo.php';
+		
+		?>
+		
+		</script>
+		<!--<script type="text/javascript" src="output/tree_v2.js"></script>-->
+	
+		
+		<div id="classes"></div>
+		
+		<div id="main"></div>
+		
+		<select id="search-options" style="display: none">
+			<option>Starts with</option>
+			<option>Ends with</option>
+			<option>Any Match</option>
+		</select>
+		
+	</body>
+	
+</html>

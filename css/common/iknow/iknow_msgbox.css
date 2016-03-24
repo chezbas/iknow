@@ -1,0 +1,270 @@
+/**
+* Fond qui bloque la page
+**/
+#iknow_msgbox_background
+{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top:0;
+  height: 100%;
+  display: none;
+  z-index: 2000;
+  background: url(../../../images/transp.png) repeat;
+}
+
+#iknow_msgbox_btn_quitter
+{
+	background-image:url(../../../images/default/panel/tool-sprites.gif);
+	margin: 5px;
+	float:right;
+	height:15px;
+	width:15px;
+	font-size:0px;
+	cursor:pointer;	
+}
+#iknow_msgbox_btn_quitter:hover
+{
+	background-position: -15px 0;
+}			
+	
+	
+/* - - - - - - - - - - - - - - - - - - - - - - -- - - - - -- */
+
+#iknow_msgbox_conteneur
+{
+	position:absolute;
+	display: block;
+	left: 50%;
+ 	top: 50%;
+	width: 400px;
+	height: 165px;
+	margin-top: -75px;
+	margin-left: -200px;
+	z-index: 9002;
+}		
+
+
+/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+/* --- --- --- --- --- --- --- HEADER  --- --- --- --- --- --- --- */
+/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+/**
+* Header Haut-Gauche
+**/
+.iknow_msgbox_hg
+{
+	background-image:url(../../../images/default/window/left-corners.png);
+	padding-left:6px;
+	position:relative;
+	height:100%;
+	background-repeat: no-repeat;
+}
+
+/**
+* Header Haut-Droite
+**/
+.iknow_msgbox_hd
+{
+	background: transparent url(../../../images/default/window/right-corners.png) no-repeat right 0;
+	padding-right:6px;
+	height:100%;
+}
+
+/**
+* Header Haut-Milieu
+**/
+.iknow_msgbox_hm
+{
+	background-image:url(../../../images/default/window/top-bottom.png);
+	height:100%;
+	display:block;
+}
+
+/**
+* Header Contenu
+**/
+.iknow_msgbox_c
+{
+	padding: 5px 0px 4px 0px;
+}
+
+
+/**
+* Header Titre
+**/
+#iknow_msgbox_titre
+{
+	color:#15428B;
+	font-size:16px;
+	font-weight:bold;
+	font-family: Times;
+	margin: 5px;
+	height: 20px;
+}
+
+/**
+* Header Sous-titre
+**/
+#iknow_msgbox_message
+{
+	color:#000000;
+	font-size: 13px;
+	font-weight: normal;
+	font-family: Times;
+	margin: 18px 5px 5px 5px;	
+	background-repeat: no-repeat;
+}
+
+
+
+/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+/* --- --- --- --- --- --- --- CONTENT --- --- --- --- --- --- --- */
+/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+
+/**
+* Content Bas-Gauche
+**/
+.iknow_msgbox_content_bg
+{
+	background:transparent url(../../../images/default/window/left-corners.png) no-repeat 0 bottom;
+	padding-left:6px;
+	height:6px;
+	background-attachment: scroll;
+}
+
+/**
+* Content Bas-Droite
+**/
+.iknow_msgbox_content_bd
+{
+	background:transparent url(../../../images/default/window/right-corners.png) no-repeat right bottom;
+	padding:0 6px 0 0;
+	margin:0px;
+}
+
+/**
+* Content Bas-Milieu
+**/
+.iknow_msgbox_content_bm
+{
+	background:transparent url(../../../images/default/window/top-bottom.png) repeat-x 0 bottom;
+	display:block;
+	height:6px;
+	font-size:0px;
+}
+	
+/**
+* Contenu du message
+*/
+#iknow_msgbox_contenu
+{
+	max-height: 70px;
+	height:70px;
+	overflow:auto;
+	width: 100%;
+	text-align: center;
+}
+	
+/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+/* --- --- --- --- --- --- --- BOUTONS --- --- --- --- --- --- --- */
+/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+.iknow_msgbox_tab_cont_btn
+{
+	border-spacing: 0px 0px;
+	margin: 0px auto;
+}
+
+.iknow_msgbox_tab_btn
+{
+	padding: 10px 0 0 0;
+	border-width: 0px;
+	border-spacing: 0px 0px;
+	width: 75px;
+	margin: 0px auto;
+}
+
+.btn_ok_g
+{
+	display: table-cell;
+	background: url(../../../images/default/button/btn-sprite.gif)  no-repeat 0 0px; /*0*/
+	height: 21px;
+	width: 3px;
+	padding:0;
+	border: 0;
+}
+
+
+
+.btn_ok_m
+{
+	display: table-cell;
+	background:url(../../../images/default/button/btn-sprite.gif) repeat-x 0 -42px; 
+	vertical-align:middle;
+	text-align:center;
+	padding:0 5px;
+	cursor:pointer;
+	white-space:nowrap;
+	height: 21px;
+	border: 0px;
+}
+
+.btn_ok_d
+{
+	display: table-cell;
+	width:3px;
+	height:21px;
+	background:url(../../../images/default/button/btn-sprite.gif) no-repeat 0 -21px; /*-21*/
+	padding:0;
+}
+
+/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+/* --- --- --- --- --- --- --- ICONES  --- --- --- --- --- --- --- */
+/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+.iknow_msgbox_icon_erreur
+{
+	background-image:url(../../../images/default/window/icon-error.gif);
+	padding-left: 38px;
+}
+
+
+.iknow_msgbox_icon_warning
+{
+	background-image:url(../../../images/default/window/icon-warning.gif);
+	padding-left: 38px;
+}
+
+
+.iknow_msgbox_icon_info
+{
+	background-image:url(../../../images/default/window/icon-info.gif);
+	padding-left: 38px;
+}
+
+.iknow_msgbox_icon_question
+{
+	background-image:url(../../../images/default/window/icon-question.gif);
+	padding-left: 38px;
+}
+
+.iknow_msgbox_icon_password
+{
+	background-image:url(../../../images/iknow/keys.png);
+	padding-left: 38px;
+}
+
+#iknow_msgbox_wait
+{
+	background-image:url(../../../images/iknow/wait.gif);
+	width:220px;
+	height:19px;
+	margin-left: auto; 
+  	margin-right: auto;
+}
+
+#iknow_msgbox_prompt
+{
+	margin-top: 12px;
+}

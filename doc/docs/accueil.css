@@ -1,0 +1,174 @@
+#accueil_conteneur
+{
+	background-color: #EFEFEF;
+	position: absolute;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+}
+
+.txt_shadow
+{
+	text-shadow: 3px 3px 8px #888;
+}
+
+#accueil_contenu
+{
+	padding: 10px 10px 10px 10px;
+	background-color:#EFEFEF;
+	margin-top: 2px;
+	position: absolute;
+	top:85px;
+	left:0;
+	right:0;
+	overflow:auto;
+	bottom:0;
+}
+
+#contenu
+{
+	padding: 10px 10px 10px 10px;
+}
+
+#description
+{
+	font-weight: normal;	
+}
+
+
+#accueil_outils
+{
+	width: 170px;
+	background-color: #FEFEFE;
+	margin: 10px 10px 10px 10px;
+	position:fixed;
+	right:22px;
+	top:145px;
+	padding: 10px 10px 10px 10px;
+	font-size: 10px;
+	box-shadow: 1px 1px 10px #555;
+	-webkit-box-shadow: 1px 1px 10px #555; 
+	border-radius: 10px;
+}
+
+.libelle_administration{
+
+	background-image: url(images/system-users.png);
+	background-repeat: no-repeat;
+	height: 22px;
+	padding-left: 30px;
+	line-height:21px;
+	margin: 2px 0 2px 0;
+}
+
+.libelle
+{
+	cursor:pointer;	
+}
+.libelle:hover
+{
+	background-color: #CCC;
+	border-radius: 4px;
+}
+
+#libelle_logout{
+
+	background-image: url(images/session-logout.png);
+	background-repeat: no-repeat;
+	height: 22px;
+	padding-left: 30px;
+	line-height:21px;
+	margin: 2px 0 2px 0;
+	
+}
+
+#libelle_edit{
+
+	background-image: url(images/page_edit.png);
+	background-repeat: no-repeat;
+	height: 22px;
+	padding-left: 30px;
+	line-height:21px;
+	margin: 2px 0 2px 0;
+	
+}
+
+
+#libelle_phpmyadmin{
+
+	background-image: url(images/database.png);
+	background-repeat: no-repeat;
+	height: 22px;
+	padding-left: 30px;
+	line-height:21px;
+	margin: 2px 0 2px 0;
+	
+}
+
+
+#libelle_bugs
+{
+	background-image: url(images/bug.png);
+	background-repeat: no-repeat;
+	height: 22px;
+	padding-left: 30px;
+	line-height:21px;
+	margin: 2px 0 2px 0;
+}
+
+
+#libelle_word{
+
+	background-image: url(images/word.png);
+	background-repeat: no-repeat;
+	height: 22px;
+	padding-left: 30px;
+	line-height:21px;
+	margin: 2px 0 2px 0;
+	
+	
+}
+
+
+#libelle_excel{
+
+	background-image: url(images/excel.png);
+	background-repeat: no-repeat;
+	height: 22px;
+	padding-left: 30px;
+	line-height:21px;
+	margin: 2px 0 2px 0;
+	
+	
+}
+
+
+#libelle_lock{
+
+	background-image: url(images/lock.png);
+	background-repeat: no-repeat;
+	height: 22px;
+	padding-left: 30px;
+	line-height:21px;
+	margin: 2px 0 2px 0;
+	
+	
+}
+
+#libelle_message
+{
+	background-image: url(images/message.png);
+	background-repeat: no-repeat;
+	height: 22px;
+	padding-left: 30px;
+	line-height:21px;
+	margin: 2px 0 2px 0;
+}
+
+.input_id
+{
+	background-image: url(../../images/shadow-tb.png);
+	background-position:0px -8px;
+	background-repeat:  repeat-x;
+}

@@ -1,0 +1,153 @@
+/**
+* General
+**/
+.iknow_panel
+{
+	display:block;
+	right:0;
+	position:absolute;
+	width:57%;
+	z-index:1000;
+}
+
+
+
+/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+/* --- --- --- --- --- --- --- HEADER  --- --- --- --- --- --- --- */
+/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+/**
+* Header Haut-Gauche
+**/
+.iknow_panel_header_hg
+{
+	background-image:url(../../images/default/window/left-corners.png);
+	padding-left:6px;
+	position:relative;
+	height:40px;
+	background-repeat: no-repeat;
+}
+
+/**
+* Header Haut-Droite
+**/
+.iknow_panel_header_hd
+{
+	background: transparent url(../../images/default/window/right-corners.png) no-repeat right 0;
+	padding-right:6px;
+	height:40px;
+}
+
+/**
+* Header Haut-Milieu
+**/
+.iknow_panel_header_hm
+{
+	background-image:url(../../images/default/window/top-bottom.png);
+	height:40px;
+	display:block;
+}
+
+/**
+* Header Contenu
+**/
+.iknow_panel_header_c
+{
+	padding: 5px 0px 4px 0px;
+	cursor:pointer;
+}
+
+/**
+* Header Bouton plier/déplier
+**/
+#iknow_panel_btn_plier
+{
+	background-image:url(../../images/default/panel/tool-sprites.gif);
+	float:right;
+	height:15px;
+	width:15px;
+	font-size:0px;
+	background-position: 0 -75px;
+}
+
+
+/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+/* --- --- --- --- --- --- --- CONTENT --- --- --- --- --- --- --- */
+/* --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+/**
+* Content 
+**/
+#iknow_panel_content
+{
+	display:none;
+	position:relative;
+}
+
+/**
+* Content Haut-Gauche
+**/
+.iknow_panel_content_hg
+{
+	background: url(../../images/default/window/left-right.png) repeat-y transparent;
+	padding-left: 6px;
+}
+
+/**
+* Content Haut-Droite
+**/
+.iknow_panel_content_hd
+{
+	background: transparent url(../../images/default/window/left-right.png) repeat-y right 0;
+	padding-right: 6px;
+}
+
+/**
+* Content Contenu
+**/
+#iknow_panel_content_c_conteneur
+{
+	background:#DFE8F6;
+	border: 1px solid #99BBE8;
+	display:block;
+	overflow:auto;
+	padding:6px;
+	max-height:550px;
+	font-size:11px;
+	font-style: normal;
+	font-family: tahoma;
+}
+
+
+
+/**
+* Content Bas-Gauche
+**/
+.iknow_panel_content_bg
+{
+	background:transparent url(../../images/default/window/left-corners.png) no-repeat 0 bottom;
+	padding-left:6px;
+	height:6px;
+	background-attachment: scroll;
+}
+
+/**
+* Content Bas-Droite
+**/
+.iknow_panel_content_bd
+{
+	background:transparent url(../../images/default/window/right-corners.png) no-repeat right bottom;
+	padding:0 6px 0 0;
+	margin:0px;
+}
+
+/**
+* Content Bas-Milieu
+**/
+.iknow_panel_content_bm
+{
+	background:transparent url(../../images/default/window/top-bottom.png) repeat-x 0 bottom;
+	display:block;
+	height:6px;
+	font-size:0px;
+}

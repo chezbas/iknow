@@ -1,0 +1,36 @@
+.err_sql_background
+{
+	background-color:#AABBCC;	
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+}
+
+.err_sql_container
+{
+	padding:50px;
+	font-family: monospace;
+	font-size: 14px;
+}
+
+.err_sql_title
+{
+	font-size: 30px;
+	font-family:sans-serif;
+	margin-bottom: 40px;
+}
+
+.err_sql_more_detail
+{
+	cursor: pointer;
+	-moz-user-select: none;
+   	-khtml-user-select: none;
+}
+
+.err_sql_detail
+{
+	margin-top:15px;
+	display: none;
+}

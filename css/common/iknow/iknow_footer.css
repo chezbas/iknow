@@ -1,0 +1,83 @@
+.left_first_el
+{
+	border-right: 1px solid #777;
+	float:left;
+	padding:0 4px;
+}
+
+.left_last_el
+{
+	border-left: 1px solid white;
+	float:left;
+	padding:0 4px;
+	/*border-right: 1px solid #777;*/
+}
+
+.left_el
+{
+	border-left: 1px solid white;
+	border-right: 1px solid #777;
+	float:left;
+	padding:0 4px;
+}
+
+
+.footer_left
+{
+	float:left;
+	line-height: 22px;
+	text-indent: 0;
+	/*border-right: 1px solid white;*/
+}
+
+
+.right_first_el
+{
+	border-left: 1px solid white;
+	float:right;
+	padding:0 4px;
+}
+
+.right_last_el
+{
+
+	border-right: 1px solid #777;
+	float:right;
+	padding:0 4px;
+	border-left: 1px solid white;
+}
+
+.right_el
+{
+	border-left: 1px solid white;
+	border-right: 1px solid #777;
+	float:right;
+	padding:0 4px;
+}
+
+.footer_right
+{
+	position:absolute;
+	height:22px;
+	right:0;
+	left:auto;
+	float:right;
+	line-height: 22px;
+	text-indent: 0;
+}
+
+#lifetime
+{
+	padding-left:22px;
+	background: url("../../../js/common/iknow/chronometer.png") 0 3px no-repeat;
+	cursor: default;
+	float:left;
+}
+
+#free_cookie
+{
+	padding-left:22px;
+	background: url("../../../js/common/iknow/cookie.png") 0 3px no-repeat;
+	cursor: default;
+	float:left;
+}

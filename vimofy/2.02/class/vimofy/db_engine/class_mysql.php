@@ -1,0 +1,120 @@
+<?php
+	
+	class mysql_engine
+	{
+		private $c_ident;
+		private $c_resultat;
+		public $link;
+		public $link_vimofy;
+		private $c_sql;
+		
+		
+		function __construct($p_ident)
+		{
+			$this->c_ident = $p_ident;
+		}
+		
+		/**
+		 * Connect to the database
+		 */
+		public function db_connect()
+		{
+			/**==================================================================
+			 * Connect to the user databsae
+			 ====================================================================*/		
+			$this->link = mysql_connect($this->c_ident['host'],$this->c_ident['user'],$this->c_ident['password']);
+			mysql_set_charset('utf8'); // FORCE_UTF8_CHARSET
+			mysql_select_db($this->c_ident['schema'],$this->link) or die('dbconn: mysql_select_db: ' + mysql_error());
+			/*===================================================================*/	
+		
+			/**==================================================================
+			 * Connect to the vimofy database
+			 ====================================================================*/		
+			//$this->link_vimofy = mysql_connect('localhost','vimofy','vimofy10');
+			//mysql_select_db('vimofy',$this->link_vimofy) or die('dbconn: mysql_select_db: ' + mysql_error());
+			/*===================================================================*/	
+		}
+		
+		public function exec_sql($sql,$line,$file,$function,$class,$link)
+		{
+			mysql_query("SET NAMES 'utf8'",$link);
+			$this->c_sql = $sql;
+			// !!! Attention bien laisser $this->resultat, ne pas retourner directement mysql_query cela ne fonctionne pas !!!
+			// $this->c_resultat = mysql_query($sql,$link) or die(mysql_error().'   '.$sql);//or $this->die_sql($sql,$line,$file,$function,$class,$link,round(microtime(true) - $start_hour,6));
+			$this->c_resultat = mysql_query($sql,$link) or $this->die_sql($sql,$line,$file,$function,$class);
+			return $this->c_resultat;
+		}
+		
+		
+		/**==================================================================
+		 * Methods
+		 ====================================================================*/	
+		private function die_sql($sql,$line,$file,$function,$class)
+		{
+			error_log($file.' : L '.$line.chr(10).$sql.chr(10).mysql_error($this->link));
+			$err = '<span style="font-size:18px;font-weight:bold;">Vimofy</span><br /><br />';
+			$err .= 'Erreur MySQL<br /><br />';
+			$err .= '<b style="color:#DD2233;">Erreur '.mysql_errno($this->link)."</b> : <b>".mysql_error($this->link).'</b><br /><br />';
+			$err .= 'Classe : '.$class.' - Ligne : '.$line.' - '.$file.' - '.$function.'<br /><br /><br />';
+			$err .= '<textarea style="width:90%;height:200px;;">'.$sql.'</textarea>';
+			
+			echo $err;
+			die();
+		}
+		
+		
+		public function rds_num_rows(&$resultat)
+		{
+			return mysql_num_rows($resultat);
+		}
+
+		public function rds_num_fields(&$resultat)
+		{
+			return mysql_num_fields($resultat);
+		}
+		
+		public function rds_data_seek(&$resultat,$row_number)
+		{
+			mysql_data_seek($resultat,$row_number);
+		}
+		
+		public function rds_fetch_array(&$result)
+		{
+			return mysql_fetch_array($result,MYSQL_ASSOC);
+		}
+		
+			
+		public function rds_result(&$result,$row,$field)
+		{
+			return mysql_result($result, $row,$field);
+		}	
+		
+		public function protect_sql($txt,&$link)
+		{
+			return mysql_real_escape_string($txt,$link);
+		}
+		/**==================================================================
+		 * Keyword
+		 ====================================================================*/	
+		public function get_like($txt)
+		{
+			return 'LIKE "'.$txt.'"';
+		}
+		
+		public function get_limit($offset,$rowcount)
+		{
+			return 'LIMIT '.$offset.','.$rowcount;
+		}	
+		
+		public function get_quote_col($col)
+		{
+			return '`'.$col.'`';
+		}
+		
+		public function get_quote_string($string)
+		{
+			return '"'.$string.'"';
+		}
+	}
+
+?>

@@ -1,0 +1,26 @@
+body
+{
+	background-color: #18a314;
+}
+
+.header_ifiche_visu_toolbar
+{
+	background-image:url(../../images/header_ifiche_visu.jpg);
+	height: 65px;
+	padding-left:0;
+	color:#EEE;
+}
+
+.iknow_txt
+{
+	color:#444;
+}
+
+#iknow_ctrl_in_progress
+{
+	float:left;
+	margin:0;
+	cursor: default;
+	font-weight: bold;
+	color:red;	
+}

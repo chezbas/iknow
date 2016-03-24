@@ -1,0 +1,10 @@
+#Wed Jan 12 07:58:12 CET 2011
+DELEGATES_PREFERENCE=delegateValidatorList
+USER_BUILD_PREFERENCE=enabledBuildValidatorList
+USER_MANUAL_PREFERENCE=enabledManualValidatorList
+USER_PREFERENCE=overrideGlobalPreferencestruedisableAllValidationfalseversion1.2.200.v201005271900
+eclipse.preferences.version=1
+override=true
+suspend=false
+vals/org.eclipse.php.ui.HTMLValidatorForPHP/global=FF01
+vf.version=3

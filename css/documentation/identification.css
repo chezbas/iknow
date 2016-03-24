@@ -1,0 +1,19 @@
+body{
+
+	width: 500px;
+	height: 500px;
+
+}
+
+
+#corps{
+
+	background-image: url(../../doc/docs/images/corps.png);
+	background-repeat: repeat-x;
+	background-position:center;
+	
+	height: 620px;
+	width: 1000px;
+	margin: 0 auto 10px auto;
+
+}
