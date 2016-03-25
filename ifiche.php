@@ -8,7 +8,7 @@
 	* Global initialization
 	====================================================================*/ 
 	require('includes/common/init_display.php');	
-	/*===================================================================*/ 
+	/**=================================================================*/
 	
 	/**==================================================================
 	* Generate iSheet object
@@ -22,8 +22,7 @@
 	{
 		if(!isset($_GET['ID']))
 		{
-			// None ID define
-			// Display error message
+		// No ID parameter defined in browser url, then display error
 			echo '</head>
 					<title>'.$_SESSION[$ssid]['message']['iknow'][17].'</title>
 					<body style="background-color:#A61415;">
@@ -36,18 +35,18 @@
 		}
 		else
 		{
+		// Isheet ID defined, ok
 			$instance_iobject = &$_SESSION[$ssid]['objet_fiche'];
 			if(isset($_GET['version']) && $_GET['version'] != null)$instance_iobject->reload_isheet($_GET['version']);
 		}
 	}
-	/*===================================================================*/  
+	/**=================================================================*/
 	
-	/**==================================================================
-	* Generate title
-	====================================================================*/   
+	//==================================================================
+	// Generate title
+	//==================================================================
 	echo '<title>'.$_SESSION[$ssid]['message'][438].' : '.$_GET['ID'].'</title>';
-	/*===================================================================*/  
-	
+
 	if(!isset($_SESSION[$ssid]['from_backup']))
 	{
 		if(isset($_SERVER['HTTP_REFERER']) && strstr($_SERVER['HTTP_REFERER'],'ikbackup=true') != false)
@@ -65,7 +64,7 @@
 	====================================================================*/   
 	$dir_obj = 'vimofy/';  
 	require($dir_obj.'vimofy_includes.php');
-	/*===================================================================*/    
+	/**=================================================================*/
 	
 	/**==================================================================
 	* Lisha init
@@ -74,20 +73,20 @@
 	require('includes/ifiche/vimofy/visu/init_liste_varout.php');
 	require('includes/ifiche/vimofy/visu/init_liste_tags.php');
 	require('includes/ifiche/vimofy/visu/init_liste_version.php');
-	/*===================================================================*/    
+	/**===================================================================*/
 
-	/*==================================================================
+	/**==================================================================
 	* Lisha internal init
-	====================================================================*/  
-	$_SESSION['vimofy'][$ssid]['vimofy2_varin']->generate_public_header();   
+	====================================================================*/
+	$_SESSION['vimofy'][$ssid]['vimofy2_varin']->generate_public_header();
 	$_SESSION['vimofy'][$ssid]['vimofy2_varin']->vimofy_generate_header();
 	$_SESSION['vimofy'][$ssid]['vimofy_varout']->vimofy_generate_header();
 	$_SESSION['vimofy'][$ssid]['vimofy_tags']->vimofy_generate_header();
 	$_SESSION['vimofy'][$ssid]['vimofy_version_fiche']->vimofy_generate_header();
-	/*===================================================================*/     
+	/**===================================================================*/
 ?>
 		<!--================================================================================
-		 -	GENERATION DE LA PARTIE STATIQUE COMPLETE DE L'ENTETE DE LA PAGE
+		 -	GENERATE STATIC HEAD HTML PAGE
 		 ================================================================================-->	
 		<link rel="stylesheet" href="css/ifiche/visu_fiche.css" type="text/css">
 		<link rel="stylesheet" href="css/ifiche/common_fiche.css" type="text/css">
@@ -115,7 +114,7 @@
 		<!--================================================================================-->
 
 		<script type="text/javascript">
-			var bloquer_pulse_tab_actif = true;		// si true empeche surcharge ajax des pulse ajax des onglets lors du click (uniquement lors du chargement de la fiche)
+			var bloquer_pulse_tab_actif = true;		// true means avoid overload ajax call on tab click ( usefull on iSheet loading page sequence )
 			var application = '<?php echo $instance_iobject->get_type(); ?>';
 			var version_soft = '<?php echo $_SESSION['iknow']['version_soft']; ?>';
 			var ssid = '<?php echo $ssid; ?>';
@@ -144,20 +143,20 @@
 			?>
 			/*================================================================================*/		
 		</script>
-		<!-- BOUTON COPIER URL DANS PRESSE PAPIER--><script type="text/javascript" src="js/common/ZeroClipboard.js"></script>
+		<!-- BUTTON TO PAST URL STRING INTO CLIPBOARD SYSTEM--><script type="text/javascript" src="js/common/ZeroClipboard.js"></script>
 	</head>	
 	<body onmousemove="vimofy_move_cur(event);" onmouseup="vimofy_mouseup();" onKeydown="javascript:fleches(event);" onmousedown="vimofy_mousedown(event);">
 		<?php 
 			require('includes/ifiche/cache.php');
 			$_SESSION['vimofy'][$ssid]['vimofy_version_fiche']->generate_lmod_header();
 			?>
-		<!-- Espace d'affichage de l'infobulle (ddrivetip)--><div id="dhtmltooltip"></div>
-		<!-- ================================================== MSGBOX ================================================= -->	
+		<!-- Div object to display info bubble (ddrivetip)--><div id="dhtmltooltip"></div>
+		<!-- ================================================== START MSGBOX ================================================= -->
 		<div id="iknow_msgbox_background"></div>
 		<div id="iknow_msgbox_conteneur" style="display:none;"></div>
 		<!-- ===============================================  END MSGBOX ==============================================  -->
 		
-		<!-- ================================================== TOOLBAR ================================================= -->	
+		<!-- ================================================== START TOOLBAR ================================================= -->
 		<div class="header_ifiche_visu_toolbar">
 			<div class="iknow_toolbar">
 				<ul id="header_list_menu">
@@ -174,24 +173,24 @@
 						
 						if($ik_valmod == 0 || $ik_valmod == 2)
 						{
-							// Pas de valeur par défaut
+							// VarIn : Don't use defaults values
 							echo '<li><div id="btn_replace_defaut" class="boutton_varin_default_off boutton_outils" onclick="javascript: change_defaut_values();" onmouseover="over(false,419,this);" onmouseout="unset_text_help();"></div></li>';
 						}
 						else
 						{
-							// Valeur par défaut
+							// VarIn : Enable to use defaults values
 							echo '<li><div id="btn_replace_defaut" class="boutton_varin_default_on boutton_outils" onclick="javascript: change_defaut_values();" onmouseover="over(false,\'22\',\'-\',\'X\');" onmouseout="unset_text_help();"></div></li>';
 						}
 						
 			
 						if($ik_valmod == 0 || $ik_valmod == 1)
 						{
-							// Pas de valeur neutre
+							// VarIn : Don't use neutrals values
 							echo '<li><div id="btn_replace_neutre" class="boutton_varin_neutre_off boutton_outils" onclick="javascript: change_neutral_values();" onmouseover="over(false,421,this);" onmouseout="unset_text_help();"></div></li>';
 						}
 						else
 						{
-							// Valeur neutre
+							// VarIn : Enable to use neutrals values
 							echo '<li><div id="btn_replace_neutre" class="boutton_varin_neutre_on boutton_outils" onclick="javascript:change_neutral_values();"  onmouseover="over(false,27,\'\',\'X\');" onmouseout="unset_text_help();"></div></li>'; 
 						}
 					?>
@@ -225,9 +224,9 @@
 		?>
 		<!-- =============================================  END TOOLBAR ================================================= -->
 
-		<!-- BEGIN Onglets -->
+		<!-- BEGIN tabs -->
 			<?php require 'includes/common/onglets.php'; ?>
-		<!-- END Onglets -->
+		<!-- END tabs -->
 
 		<!-- ================================================== BEGIN FOOTER ================================================= -->	
 		<div id="iknow_menu_footer_container" class="iknow_el_container div_menu_footer">
@@ -250,14 +249,14 @@
 				</table>
 			</div>
 		</div>
-			<!-- ================================================= BARRE LOGS ============================================== -->
+		<!-- ============================================== BEGIN LOGS AREA ============================================== -->
 		<div id="iknow_log_container" class="iknow_el_container iknow_ctrl_el">
 			<div id="iknow_log_internal_container" class="iknow_el_internal_container iknow_ctrl_internal_container">
 			</div>
 		</div>
-		<!-- ============================================== END BARRE LOGS ============================================= -->
+		<!-- ============================================== END LOGS AREA ============================================= -->
 
-		<!-- ============================================ BARRE INFORMATIONS ====================================== -->
+		<!-- ============================================ BEGIN INFORMATION AREA ====================================== -->
 		<div id="iknow_ctrl_container" class="iknow_el_container iknow_ctrl_el" style="float: left;">
 			<div id="iknow_ctrl_internal_container" class="iknow_el_internal_container iknow_ctrl_internal_container">
 			<?php
@@ -275,7 +274,7 @@
 			?>
 			</div>
 		</div>
-		<!-- ========================================== END BARRE INFORMATIONS ===================================== -->
+		<!-- ========================================== END INFORMATION AREA ===================================== -->
 
 		<div id="footer"></div>
 		<!-- ================================================== END FOOTER ================================================= -->
@@ -289,10 +288,10 @@
 			<?php
 
 				$instance_iobject->generer_fiche();
-				$end_hour = microtime(true);							// Calcul du temps de generation de la fiche
-				/************************************************************************************************************
-				 *	CONSERVER L'ONGLET COURANT ACTIF AU CHARGEMENT
-				 *************************************************************************************************************/	
+				$end_hour = microtime(true);	// Compute load cpu time to build ISheet
+				//==================================================================
+				// Keep focus on current tab during loading iSheet
+				//==================================================================
 				if(isset($_GET['tab-level']))
 				{
 					echo $instance_iobject->retourne_tab_level($_GET['tab-level']);
@@ -304,14 +303,11 @@
 					echo 'tabbar_step.setTabActive(\''.$instance_iobject->get_tab_actif_etapes().'\');';
 					echo 'step_tabbar_sep.setTabActive(\''.$instance_iobject->get_tab_actif_etapes_sep().'\');';
 				}
-				/************************************************************************************************************/
+				//==================================================================
 								
-				/************************************************************************************************************
-				 *	PURGE DES COOKIES NR_IKNOW_10_
-				 *************************************************************************************************************/	
+				// Clean cookies
 				echo $instance_iobject->purge_cookie();
-				/************************************************************************************************************/
-				
+
 				$time_load = round($end_hour - $start_hour,3);
 			?>
 			
@@ -319,17 +315,17 @@
 			
 			var bloquer_pulse_tab_actif = false;
 			
-			//************************************************************************************************************
-			// INSTANCIATION DE LA CLASSE ZeroClipboard (Presse papier)
-			//************************************************************************************************************				
+			//==================================================================
+			// Build ZeroClipboard ( Clipboard )
+			//==================================================================
             var clip = new ZeroClipboard.Client();
             clip.setText(url_remove('ssid'));
             clip.glue('d_clip_button');
-            //************************************************************************************************************	
+			//==================================================================
 
-            //************************************************************************************************************
-			// Définition des variables statiques globales	
-			//************************************************************************************************************	
+			//==================================================================
+			// Setup main static variables
+			//==================================================================
             var ID_fiche = '<?php echo $_GET['ID']; ?>';
             var version_fiche = <?php echo $instance_iobject->get_version();	?>;
 			var ID_temp = <?php echo $instance_iobject->get_id_temp(); ?>;
@@ -356,11 +352,11 @@
 				}
 				
 				?>
-			//************************************************************************************************************	
-		
-			//************************************************************************************************************
-			// FENETRE VOLANTE DDRIVETIP
-			//************************************************************************************************************			
+			//==================================================================
+
+			//==================================================================
+			// Div for ddrivetip window
+			//==================================================================
 			var enabletip=false;
 			var offsetxpoint=-10; 	
 			var offsetypoint=10; 	
@@ -372,11 +368,11 @@
 			var tipobj=document.getElementById("dhtmltooltip");
 			
 			document.onmousemove=positiontip;
-			//************************************************************************************************************	
+			//==================================================================
 		
-			//************************************************************************************************************
-			// RACCOURCIS CLAVIER
-			//************************************************************************************************************				
+			//==================================================================
+			// Keyboard Shortcut
+			//==================================================================
 			var isCtrl = false;
 
 			document.onkeyup = function(e)
@@ -387,12 +383,12 @@
 			    }
 			}
 			document.onkeydown = function(e){
-				// DEPLACEMENT VERS UNE ETAPE (F12)
+				// Jump to iSheet step (F12)
 			    if(e.which == 123) 
 				{
 			         rac_deplacer_sur_etape();
 			    }
-			    // DEPLACEMENT SUR L'ONGLET ENTETE -> GENERAL (F11)
+			    // Jump to tab HEAD -> MAIN (F11)
 			    if(e.which == 122) 
 				{
 					 a_tabbar.setTabActive('tab-level1');
@@ -400,12 +396,12 @@
 					 window.location  = '#'+id_etape_dest;
 			         return false;
 			    }
-				// Detection du CTRL
+				// Key CTRL pressed ?
 			    if(e.which == 17)
 				{
 				     isCtrl=true;
 			    }
-				// AIDE - CTRL+F1 			
+				// HELP - (CTRL+F1)
 		        if(e.which == 112 && isCtrl == true)
 			    {
 		        	if((viewer_aide) && (viewer_aide!=''))
@@ -413,18 +409,18 @@
 		        		window.open("index.php?ID="+viewer_aide);
 		        	} 
 		        	else
-			        {  // page d'aide par défaut
+			        {  // Default help page
 		        		window.open("index.php?ID=");  		
 		        	}    	
 		        } 
 			};	// End onkeydown	
-			//************************************************************************************************************	
+			//==================================================================
 			function event_click_onglet(idd)
 			{
 
 			}
 			var qtt_step = <?php echo $instance_iobject->compter_etapes(); ?>;
-			// Contrôle des cookies
+			// Check cookies
 			//ctrl_free_cookie('lib_erreur',true);
 			//signal_presence();
 			document.getElementById('lst_vimofy_version_fiche').value = "<?php echo $instance_iobject->get_version(); ?>";
@@ -506,4 +502,3 @@
 		mysql_select_db($_SESSION['iknow'][$ssid]['schema_iknow'],$link) or die('dbconn: mysql_select_db: ' + mysql_error());
 		mysql_query($sql,$link) or die('erreur');
 	}
-?>
