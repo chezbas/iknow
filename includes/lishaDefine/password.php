@@ -184,7 +184,7 @@
 	// Table columns primary key
 	// Caution : Can't change key column name from origine query column name
 	// It's not required to declare column key with define_column method
-	$obj_lisha_password->define_key(Array('id','object','user'));
+	$obj_lisha_password->define_key(Array('id'));
 
 	//==================================================================
 	// Define extra events actions 
