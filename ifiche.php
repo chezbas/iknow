@@ -171,6 +171,17 @@
 					<?php 
 						$ik_valmod = $instance_iobject->get_ik_valmod();
 						
+						if($ik_valmod == 0 || $ik_valmod == 1)
+						{
+							// VarIn : Don't use neutrals values
+							echo '<li><div id="btn_replace_neutre" class="boutton_varin_neutre_off boutton_outils" onclick="javascript: change_neutral_values();" onmouseover="over(false,421,this);" onmouseout="unset_text_help();"></div></li>';
+						}
+						else
+						{
+							// VarIn : Enable to use neutrals values
+							echo '<li><div id="btn_replace_neutre" class="boutton_varin_neutre_on boutton_outils" onclick="javascript:change_neutral_values();"  onmouseover="over(false,27,\'\',\'X\');" onmouseout="unset_text_help();"></div></li>';
+						}
+
 						if($ik_valmod == 0 || $ik_valmod == 2)
 						{
 							// VarIn : Don't use defaults values
@@ -180,18 +191,6 @@
 						{
 							// VarIn : Enable to use defaults values
 							echo '<li><div id="btn_replace_defaut" class="boutton_varin_default_on boutton_outils" onclick="javascript: change_defaut_values();" onmouseover="over(false,\'22\',\'-\',\'X\');" onmouseout="unset_text_help();"></div></li>';
-						}
-						
-			
-						if($ik_valmod == 0 || $ik_valmod == 1)
-						{
-							// VarIn : Don't use neutrals values
-							echo '<li><div id="btn_replace_neutre" class="boutton_varin_neutre_off boutton_outils" onclick="javascript: change_neutral_values();" onmouseover="over(false,421,this);" onmouseout="unset_text_help();"></div></li>';
-						}
-						else
-						{
-							// VarIn : Enable to use neutrals values
-							echo '<li><div id="btn_replace_neutre" class="boutton_varin_neutre_on boutton_outils" onclick="javascript:change_neutral_values();"  onmouseover="over(false,27,\'\',\'X\');" onmouseout="unset_text_help();"></div></li>'; 
 						}
 					?>
 					<li><div class="boutton_url_home boutton_outils" onclick="tuer_session();window.location.replace('./liste_fiches.php');" onmouseover="over(false,408,'','');" onmouseout="unset_text_help();"></div></li>

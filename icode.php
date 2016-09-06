@@ -159,28 +159,28 @@
 					<li><div class="boutton_url_delete boutton_outils" onclick="javascript:delete_value_param(true);" onmouseover="over(96,23,'-','X');" onmouseout="unset_text_help();"></div></li>
 					<?php 
 						$ik_valmod = $instance_iobject->get_ik_valmod();
-						if($ik_valmod == 0 || $ik_valmod == 2)
-						{
-							// Pas de valeur par défaut
-							echo '<li><div id="btn_replace_defaut" class="boutton_varin_default_off boutton_outils" onclick="javascript: change_defaut_values();" onmouseover="over(false,25,\'-\',\'X\');" onmouseout="unset_text_help();"></div></li>';
-						}
-						else
-						{
-							// Valeur par défaut
-							echo '<li><div id="btn_replace_defaut" class="boutton_varin_default_on boutton_outils" onclick="javascript: change_defaut_values();" onmouseover="over(97,22,\'-\',\'X\');" onmouseout="unset_text_help();"></div></li>';
-						}
-						
-			
 						if($ik_valmod == 0 || $ik_valmod == 1)
 						{
-							// Pas de valeur neutre
+							// Neutral value disabled
 							echo '<li><div id="btn_replace_neutre" class="boutton_varin_neutre_off boutton_outils" onclick="javascript: change_neutral_values();" onmouseover="over(false,26,\'-\',\'X\');" onmouseout="unset_text_help();"></div></li>';
 						}
 						else
 						{
-							// Valeur neutre
-							echo '<li><div id="btn_replace_neutre" class="boutton_varin_neutre_on boutton_outils" onclick="javascript:change_neutral_values();"  onmouseover="over(98,27,\'-\',\'X\');" onmouseout="unset_text_help();"></div></li>'; 
+							// Neutral value enabled
+							echo '<li><div id="btn_replace_neutre" class="boutton_varin_neutre_on boutton_outils" onclick="javascript:change_neutral_values();"  onmouseover="over(98,27,\'-\',\'X\');" onmouseout="unset_text_help();"></div></li>';
 						}
+
+						if($ik_valmod == 0 || $ik_valmod == 2)
+						{
+							// Default value disabled
+							echo '<li><div id="btn_replace_defaut" class="boutton_varin_default_off boutton_outils" onclick="javascript: change_defaut_values();" onmouseover="over(false,25,\'-\',\'X\');" onmouseout="unset_text_help();"></div></li>';
+						}
+						else
+						{
+							// VDefault value enabled
+							echo '<li><div id="btn_replace_defaut" class="boutton_varin_default_on boutton_outils" onclick="javascript: change_defaut_values();" onmouseover="over(97,22,\'-\',\'X\');" onmouseout="unset_text_help();"></div></li>';
+						}
+
 					?>
 					<li><div class="boutton_url_home boutton_outils" onclick="tuer_session();window.location.replace('liste_codes.php');" onmouseover="over(false,75,'-','X');" onmouseout="unset_text_help();"></div></li>
 				</ul>
